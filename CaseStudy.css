@@ -1,0 +1,281 @@
+body {
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.022em;
+    font-weight: 510;
+    line-height: 1.4705882353;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 98.8%;
+    bottom: 16px;
+    z-index: 2;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left:0px;
+    top:0px;
+    z-index: -1;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin: 16px;
+}
+
+.icon {
+    display: flex;
+    position:relative;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 60px;
+}
+
+.icon-title {
+    font-size: clamp(16px, 4vw, 32px);
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.main-title {
+    font-size: clamp(36px, 7vw, 72px);
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    line-height: normal;
+}
+
+.key-image {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+}
+
+.main-text {
+    font-size: clamp(14px, 3vw, 28px);
+    font-weight: 450;
+    margin-top: 20px;
+    text-align: center;
+    line-height: normal;
+    width: 67%;
+}
+
+.light-text {
+    font-size: clamp(14px, 3vw, 28px);
+    font-weight: 450;
+    margin-top: 20px;
+    text-align: center;
+    line-height: normal;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: clamp(18px, 3vw, 36px);
+    font-weight: 650;
+    margin-top: 100px;
+    margin-left: 40px;
+    align-self: flex-start;
+    line-height: normal;
+}
+
+.box {
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.box-2 {
+    display: flex;
+    position: relative;
+    flex-direction: row; 
+}
+
+.box-2-ghost {
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.text-container, .small-text-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    width: 450px;
+    margin: 108px;
+}
+
+.box-title {
+    font-size: clamp(14px, 4vw, 28px);
+    font-weight: 600;
+    display: flex;
+    position: absolute;
+    top: 64px;
+    left: 64px;
+    align-self: flex-start;
+    line-height: normal;
+    z-index: 1;
+}
+
+.focus-text {
+    font-size: clamp(26px, 3vw, 52px);
+    font-weight: 650;
+    line-height: normal;
+}
+
+.secondary-text {
+    font-size: clamp(16px, 2.5vw, 32px);
+    font-weight: 550;
+    line-height: normal;
+    color: rgb(0, 0, 0, 0.5);
+    margin-top: 32px;
+}
+
+.small-text {
+    font-size: clamp(10px, 2vw, 17px);
+    font-weight: 550;
+    line-height: normal;
+    color: rgb(0, 0, 0, 0.5);
+    margin:66px;
+    margin-top: 120px;
+}
+
+.iPhone {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+.notif {
+    height: 38%;
+    width: 38%;
+    display:flex;
+    position: relative;
+    margin: 5%;
+}
+
+.iPhone-6 {
+    height: 68%;
+    width: 68%;
+    display: flex;
+    position: relative;
+    margin-top: -15%;
+    margin-bottom: -15%;
+    margin-left: -5%;
+}
+
+.iPhone-3 {
+    height: 70%;
+    width: 70%;
+    display: flex;
+    position: relative;
+    margin-left: -5%;
+    margin-top: 1.5%;
+}
+
+.iPhone-2 {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    position: relative;
+    margin-left: -5%;
+    margin-top: 3%;
+}
+
+.evolution {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 100px;
+    justify-self: center;
+    margin-left:1%;
+}
+
+.full {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-self: center;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    height: 75px;
+    border-radius: 45px;
+    justify-content: center;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(10px);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-weight: medium;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 550;
+}
+    
+.button i {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+    font-size: 22px; 
+}
+
+.button:hover {
+transform: scale(1.2);
+}
+
+@media screen and (max-width: 750px) {
+    .portfolio {
+        min-width: 310px;
+    }
+
+    .p-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+}

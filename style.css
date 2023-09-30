@@ -1,0 +1,238 @@
+body {
+    font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.022em;
+    font-weight: 700;
+    line-height: 1.4705882353;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-image: url("Im/Wall2.png");
+    background-size: cover;
+    left:0px;
+    top:0px;
+    z-index: -1;
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 98.8%;
+    bottom: 13px;
+    z-index:2;
+}
+
+.equal-half {
+    margin: 16px;
+    width: 120px;
+}
+
+.button-line {
+    width: 3px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+.button-container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 80px;
+    height: 50px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.strong {
+    color: white;
+    font-weight: 650;
+    font-size: 42px;
+    display:flex;
+    position: fixed;
+    width: 255px;
+    left: 48px;
+    top: 38%;
+}
+
+.scroll-container {
+    margin-left: 351px;
+    margin-top: 48px;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(10px);
+    border-radius: 28px;
+    align-items: center;
+    z-index: 50;
+}
+
+.tile, .tile-2 {
+    width: 415px;
+    height: 732px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.15);
+    padding: 32px;
+    margin-right: 32px;
+    padding-bottom: 0px;
+    background-color: white;
+}
+
+.tile-2 {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tile-2:hover {
+    transform: scale(1.025);
+}
+
+.tile-ghost {
+    width: 112px;
+    height: 600px;
+    flex-shrink: 0;
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.tile-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom:20px;
+}
+
+.tile-body {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.tile-icon {
+    min-width: 70px;
+    min-height: 70px;
+    flex-shrink: 0px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    overflow: hidden;
+    margin-bottom: 12px;
+    align-self: center;
+}
+
+.icon-title {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 625;
+    line-height: normal;
+    margin-bottom:16px;
+    align-self: center;
+    text-align: center;
+    color: black;
+}
+
+.tile-title2 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-self: center;
+    text-align: center;
+    color: black;
+}
+
+.tile-cover {
+    width: 96%;
+    height: 100%;
+    background-size: cover;
+    align-self: center;
+    margin-top: -20px;
+}
+
+.au-disc {
+    width: 365px;
+    height: 365px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.15);
+    background-size: cover;
+    margin-bottom: 32px;
+    margin-right: -6px;
+    animation: spin 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.disc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 300px;
+    height: 75px;
+    border-radius: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    background: rgb(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: medium;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 550;
+}
+    
+.button i {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+    font-size: 22px; 
+}
+
+.button:hover {
+transform: scale(1.2);
+}
