@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    letter-spacing: -0.022em;
-    font-weight: 700;
+    font-family: 'Inter', Helvetica Neue,sans-serif;
     line-height: 1.4705882353;
+    letter-spacing: -0.022em;
     -webkit-font-smoothing: antialiased;
     font-style: normal;
     color: white;
@@ -32,7 +33,7 @@ body {
 .main-title {
     font-size: 150px;
     margin-bottom: -5vh;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
     text-align: center;
     animation: main-titleAnimation 3s ease-in-out none;
@@ -52,11 +53,12 @@ body {
 
 .subtitle {
     font-size: 64px;
-    font-weight: bold; 
+    font-weight: 700;
     margin-bottom: 5vh;
     color: white;
     z-index: 1;
     text-align: center;
+    line-height: normal;
 }
 
 @keyframes subtitle1Animation {
@@ -73,11 +75,10 @@ body {
     }
 }
 
-.tile-container, .tile-visible {
+.tile-container, .tile-visible, .tile-container2 {
     display: flex;
     position: relative;
     flex-direction: row; 
-    backdrop-filter: blur(10px);
     border-radius: 32px;
     margin-bottom: 72px;
     animation: tile2Animation 0.5s ease-in-out none;
@@ -99,6 +100,7 @@ body {
     overflow: hidden;
     padding: 32px;
     padding-bottom: 0px;
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .tile-ghost {
@@ -159,12 +161,16 @@ body {
     z-index: 1;
 }
 
-.tile-body {
-    font-size: 22px;
+.tile-body, .tile-body2 {
+    font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: normal;
     z-index: 1;
+}
+
+.tile-body2 {
+    width: 40%;
 }
 
 .darken-body {
@@ -204,12 +210,13 @@ body {
     overflow: hidden;
     margin-bottom: 12px;
     align-self: center;
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .icon-title {
     font-size: 21px;
     font-style: normal;
-    font-weight: 625;
+    font-weight: 600;
     line-height: normal;
     margin-bottom:16px;
     align-self: center;
@@ -228,12 +235,13 @@ body {
 }
 
 .tile-title3 {
-    font-size: 42px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     align-self: flex-start;
     text-align: flex-start;
+    width: 30%;
 }
 
 .tile-cover {
@@ -266,6 +274,7 @@ body {
     margin: 16px;
     margin-bottom:64px;
     animation: spin 1s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 @keyframes spin {
@@ -280,7 +289,7 @@ body {
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 98.8%;
+    width: 100%;
     bottom: 8px;
     z-index: 2;
 }
@@ -291,12 +300,13 @@ body {
     border-radius: 45px;
     justify-content: center;
     box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.15);
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
-    flex-shrink: 0;
     display: flex;
     flex-direction: row;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .button {
@@ -314,7 +324,7 @@ body {
     transition: transform 0.3s ease-in-out;
     text-decoration: none;
     font-size: 17px;
-    font-weight: 550;
+    font-weight: 500;
 }
     
 .button img {
@@ -343,3 +353,109 @@ body {
 transform: scale(1.2);
 }
 
+.expand {
+    display: flex;
+    width: 100%;
+}
+
+.expand33 {
+    display: flex;
+    width: 33%;
+}
+
+.expand66 {
+    display: flex;
+    width: 66%;
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        margin: 4px;
+        margin-top: 30vh;
+    }
+
+    .main-title {
+        font-size: 84px;
+        margin-bottom: 2vh;
+        line-height: 84px;  
+    }
+
+    .subtitle {
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .tile-visible, .tile-container2 {
+        flex-direction: column;
+        margin-bottom: 0px; 
+    }
+
+    .ghost-tile {
+        width: 0px;
+        height: 0px;
+    }
+
+    a {
+        margin-bottom: 64px;  
+    }
+
+    .expand, .expand33, .expand66 {
+        margin-bottom: 64px;
+        width: 100%;
+    }
+
+    .tile, .tile-2 {
+        height: 80vh;
+    }
+
+    .tile-title {
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .tile-body, .tile-body2 {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .icon-title {
+        font-size: 19px;
+        margin-bottom:12px;
+    }
+
+    .tile-cover {
+        max-height: 125%;
+        max-width: 125%;
+    }
+    .tile-title2, .tile-title3 {
+        font-size: 32px;
+    }
+
+    .tile-title3 {
+        width: 60%;
+    }
+
+    .au-disc {
+        width: 65vw;
+        height:65vw;
+        margin: 8px;
+        margin-bottom:28px;
+    }
+
+    .sidebar {
+        width: 270px;
+        height: 67.5px;
+    }
+
+    .button {
+        margin: 4.5px;
+        margin-left: 9px;
+        margin-right: 9px;
+        font-size: 15.3px; 
+    }
+
+    .button img {
+        width: 23.4px; 
+        height: 23.4px; 
+    }
+}

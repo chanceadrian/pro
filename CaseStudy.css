@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 body {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', Helvetica Neue,sans-serif;
     letter-spacing: -0.022em;
     line-height: 1.4705882353;
     -webkit-font-smoothing: antialiased;
@@ -38,17 +40,18 @@ body {
 }
 
 .icon-title {
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: clamp(19px, 4vw, 32px);
     font-weight: 600;
     margin-top: 20px;
 }
 
 .main-title {
-    font-size: clamp(36px, 7vw, 72px);
+    font-size: clamp(42px, 7vw, 72px);
     font-weight: 700;
     margin-top: 20px;
     text-align: center;
     line-height: normal;
+    width: 60%;
 }
 
 .key-image {
@@ -60,7 +63,7 @@ body {
 }
 
 .main-text {
-    font-size: clamp(14px, 3vw, 28px);
+    font-size: clamp(17px, 3vw, 28px);
     font-weight: 450;
     margin-top: 20px;
     text-align: center;
@@ -69,8 +72,8 @@ body {
 }
 
 .light-text {
-    font-size: clamp(14px, 3vw, 28px);
-    font-weight: 450;
+    font-size: clamp(17px, 3vw, 28px);
+    font-weight: 500;
     margin-top: 20px;
     text-align: center;
     line-height: normal;
@@ -78,7 +81,7 @@ body {
 }
 
 .subtitle {
-    font-size: clamp(18px, 3vw, 36px);
+    font-size: clamp(19px, 3vw, 36px);
     font-weight: 650;
     margin-top: 100px;
     margin-left: 40px;
@@ -96,12 +99,15 @@ body {
     margin-top: 20px;
     overflow: hidden;
     width: 100%;
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
+
 }
 
 .box-2 {
     display: flex;
     position: relative;
     flex-direction: row; 
+    width: 100%;
 }
 
 .box-2-ghost {
@@ -109,7 +115,7 @@ body {
     flex-shrink: 0;
 }
 
-.text-container, .small-text-container {
+.text-container, .small-text {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -120,7 +126,7 @@ body {
 }
 
 .box-title {
-    font-size: clamp(14px, 4vw, 28px);
+    font-size: clamp(17px, 4vw, 28px);
     font-weight: 600;
     display: flex;
     position: absolute;
@@ -132,13 +138,13 @@ body {
 }
 
 .focus-text {
-    font-size: clamp(26px, 3vw, 52px);
+    font-size: clamp(32px, 3vw, 52px);
     font-weight: 650;
     line-height: normal;
 }
 
 .secondary-text {
-    font-size: clamp(16px, 2.5vw, 32px);
+    font-size: clamp(24px, 2.5vw, 32px);
     font-weight: 550;
     line-height: normal;
     color: rgb(0, 0, 0, 0.5);
@@ -146,8 +152,8 @@ body {
 }
 
 .small-text {
-    font-size: clamp(10px, 2vw, 17px);
-    font-weight: 550;
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: 500;
     line-height: normal;
     color: rgb(0, 0, 0, 0.5);
     margin:66px;
@@ -159,6 +165,7 @@ body {
     width: 40%;
     display: flex;
     position: relative;
+    
 }
 
 .notif {
@@ -221,7 +228,7 @@ body {
     position: fixed;
     justify-content: center;
     align-items: center;
-    width: 98.8%;
+    width: 100%;
     bottom: 8px;
     z-index: 2;
 }
@@ -237,6 +244,8 @@ body {
     display: flex;
     flex-direction: row;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
 }
 
 .button {
@@ -254,7 +263,7 @@ body {
     transition: transform 0.3s ease-in-out;
     text-decoration: none;
     font-size: 17px;
-    font-weight: 525;
+    font-weight: 500;
 }
     
 .button img {
@@ -267,14 +276,143 @@ body {
 transform: scale(1.2);
 }
 
-@media screen and (max-width: 750px) {
-    .portfolio {
-        min-width: 310px;
+@media screen and (max-width: 800px) {
+    body {
+        overflow-x: hidden;
     }
 
-    .p-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
+    .main-container {
+        margin: 0vw;
+    }
+
+    .icon {
+        width: 75px;
+        height: 75px;
+        margin-top: 5vh;
+        border-radius: 16px;
+        box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    .icon-title {
+        margin-top: 1.5vh;
+    }
+
+    .main-title {
+        width: 100%;
+        margin-top: 3vh;
+    }
+
+    .key-image {
+        height: 200%;
+        width: 200%;
+        margin-top: 0vh;
+    }
+
+    .main-text {
+        width: 100%;
+    }
+
+    .subtitle {
+        margin-top: 5vh;
+        margin-left: 5vw;
+    }
+
+    .box, .box-2 {
+        border-radius: 0px;
+        margin-top: 2vh;
+        flex-direction: column;
+        width: 105%;
+        justify-content: center;
+    }
+
+    .box-2 {
+        margin-top: 0vh;
+        width: 105%;
+        justify-self: flex-start;
+    }
+
+    .box-2-ghost {
+        width:0px;
+        height: 0px;
+    }
+
+    .text-container, .small-text {
+        align-items: center;
+        width: 90%;
+        margin-top: 8vh;
+    }
+
+    .box-title {
+        top: 5vw;
+        left: 5vw;;
+    }
+
+    .focus-text, .secondary-text {
+        text-align: center;
+        margin-top: 2vh;
+    }
+
+    .small-text {
+        margin:7vh;
+        margin-top: 10vh;
+        margin-bottom:3vh;
+    }
+
+    .iPhone {
+        height: 100%;
+        width: 100%;
+        margin-top: -15vh;
+    }
+
+    .notif {
+        height: 90%;
+        width: 90%; 
+        margin-top: -15vh;
+    }
+
+    .iPhone-6 {
+        height: 150%;
+        width: 150%;
+        margin-left: 2vw;
+        margin-bottom: -50%;
+        margin-top: -13vh;
+    }
+
+    .iPhone-3 {
+        height: 160%;
+        width: 160%;
+        margin-left: 2vw;
+        margin-top: -13vh;
+        margin-bottom: -33%;
+    }
+
+    .iPhone-2 {
+        height: 110%;
+        width: 110%;
+        margin-left: 6vw;
+        margin-top: -13vh;
+        margin-bottom: -28%;
+    }
+
+    .full {
+        height: 130%;
+        width: 130%;
+    }
+
+    .sidebar {
+        width: 270px;
+        height: 67.5px;
+    }
+
+    .button {
+        margin: 4.5px;
+        margin-left: 9px;
+        margin-right: 9px;
+        font-size: 15.3px; 
+    }
+
+    .button img {
+        width: 23.4px; 
+        height: 23.4px; 
     }
 }
