@@ -51,7 +51,7 @@ body {
     margin-top: 20px;
     text-align: center;
     line-height: normal;
-    width: 60%;
+    width: 100%;
 }
 
 .key-image {
@@ -115,7 +115,7 @@ body {
     flex-shrink: 0;
 }
 
-.text-container, .small-text {
+.text-container {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -161,8 +161,8 @@ body {
 }
 
 .iPhone {
-    height: 40%;
-    width: 40%;
+    height: 37%;
+    width: 37%;
     display: flex;
     position: relative;
     
@@ -177,18 +177,18 @@ body {
 }
 
 .iPhone-6 {
-    height: 68%;
-    width: 68%;
+    height: 65%;
+    width: 65%;
     display: flex;
     position: relative;
-    margin-top: -15%;
-    margin-bottom: -15%;
+    margin-top: -17%;
+    margin-bottom: -17%;
     margin-left: -5%;
 }
 
 .iPhone-3 {
-    height: 70%;
-    width: 70%;
+    height: 65%;
+    width: 65%;
     display: flex;
     position: relative;
     margin-left: -5%;
