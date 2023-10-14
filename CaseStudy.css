@@ -7,6 +7,7 @@ body {
     -webkit-font-smoothing: antialiased;
     color: rgb(0, 0, 0);
     font-style: normal;
+    overflow-x: hidden;
 }
 
 .background {
@@ -89,7 +90,7 @@ body {
     line-height: normal;
 }
 
-.box {
+.box, .box-column {
     border-radius: 50px;
     background-color: white;
     display: flex;
@@ -100,7 +101,10 @@ body {
     overflow: hidden;
     width: 100%;
     box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.4), inset 0px -1px 1px rgba(255, 255, 255, 0.1);
+}
 
+.box-column {
+    flex-direction: column;
 }
 
 .box-2 {
@@ -115,14 +119,20 @@ body {
     flex-shrink: 0;
 }
 
-.text-container {
+.text-container, .text-container-column {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
-    width: 450px;
+    width: 30%;
     margin: 108px;
+}
+
+.text-container-column {
+    width: 90%;
+    margin-bottom: 0px;
+    align-items: center;
 }
 
 .box-title {
@@ -177,8 +187,8 @@ body {
 }
 
 .iPhone-6 {
-    height: 65%;
-    width: 65%;
+    height: 68%;
+    width: 68%;
     display: flex;
     position: relative;
     margin-top: -17%;
@@ -187,12 +197,10 @@ body {
 }
 
 .iPhone-3 {
-    height: 65%;
-    width: 65%;
+    height: 100%;
+    width: 100%;
     display: flex;
     position: relative;
-    margin-left: -5%;
-    margin-top: 1.5%;
 }
 
 .iPhone-2 {
@@ -201,7 +209,6 @@ body {
     display: flex;
     position: relative;
     margin-left: -5%;
-    margin-top: 3%;
 }
 
 .evolution, .evolution2 {
