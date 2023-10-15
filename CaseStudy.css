@@ -162,7 +162,7 @@ body {
 }
 
 .small-text {
-    font-size: clamp(14px, 2vw, 17px);
+    font-size: clamp(14px, 3vw, 17px);
     font-weight: 500;
     line-height: normal;
     color: rgb(0, 0, 0, 0.5);
