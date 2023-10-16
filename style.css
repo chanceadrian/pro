@@ -198,7 +198,7 @@ body {
 
 .tile-ghost-2 {
     min-width: 20px;
-    min-height:20px;
+    min-height:87vh;
     display: flex;
 }
 
@@ -275,7 +275,7 @@ body {
 }
 
 .tile-title2 {
-   font-size: 36px;
+   font-size: 34px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
