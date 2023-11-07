@@ -447,6 +447,11 @@ transform: scale(1.2);
     width: 66.666%;
 }
 
+.expand2 {
+    display: flex;
+    width: 32.5%;
+}
+
 @media (max-width: 800px) {
     .main-container {
         margin: 4px;
@@ -488,7 +493,7 @@ transform: scale(1.2);
         margin-bottom: 64px;  
     }
 
-    .expand, .expand33, .expand66 {
+    .expand, .expand33, .expand66, .expand2 {
         margin-bottom: 0px;
         width: 100%;
     }
