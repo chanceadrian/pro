@@ -206,7 +206,7 @@ body {
 .tile-title {
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 550;
     line-height: normal;
     margin-bottom:20px;
     z-index: 1;
@@ -218,6 +218,7 @@ body {
     font-weight: 400;
     line-height: normal;
     z-index: 1;
+    margin-bottom: 10vh;
 }
 
 .tile-body2 {
@@ -298,7 +299,7 @@ body {
 .tile-cover {
     max-height: 100%;
     max-width: 100%;
-    display: block;
+    display: flex;
     position: relative;
     align-self: center;
 }
@@ -394,6 +395,13 @@ body {
     align-self: center;
 }
 
+.i-hand {
+    width: 40px; 
+    height: 40px; 
+    margin-bottom: 18vh;
+    opacity: 0.75;
+}
+
 .i-right-b, .i-right {
     width: 40px;
     height: 40px;
@@ -449,7 +457,7 @@ transform: scale(1.2);
 
 .expand2 {
     display: flex;
-    width: 32.5%;
+    width: 32.35%;
 }
 
 @media (max-width: 800px) {
