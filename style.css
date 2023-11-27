@@ -633,6 +633,11 @@ transform: scale(1.15);
         border-radius: 0px;
     }
 
+    .button {
+        margin-bottom:12px;
+        margin: 5px;
+    }
+
     @keyframes frontAnimation {
         0% {
             scale:1;
