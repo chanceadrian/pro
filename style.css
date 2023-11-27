@@ -634,8 +634,8 @@ transform: scale(1.15);
     }
 
     .button {
-        margin-bottom:12px;
         margin: 5px;
+        margin-bottom:16px;
     }
 
     @keyframes frontAnimation {
