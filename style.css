@@ -495,7 +495,7 @@ transform: scale(1.15);
     .text-column {
         padding-left: 16px;
         padding-right: 16px;
-        margin-top: -8px;
+        margin-top: 8px;
     }
     
     .header-title {
@@ -505,9 +505,10 @@ transform: scale(1.15);
     }
     
     .header-caption {
+        margin-top: 16px;
         font-size: 17px;
         width:95%; 
-        margin-bottom:-8px;
+        margin-bottom:8px;
     }
     
     .header-detail {
@@ -516,7 +517,7 @@ transform: scale(1.15);
 
     .story-text {
         font-size: 17px;
-        margin-top: 0px;
+        margin-top: 16px;
     }
     
     .story-text p {
