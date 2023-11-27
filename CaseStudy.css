@@ -360,6 +360,11 @@ transform: scale(1.15);
         border-radius: 0px;
     }
     
+    .button {
+        margin-bottom:12px;
+        margin: 5px;
+    }
+
     body {
         overflow-x: hidden;
     }
