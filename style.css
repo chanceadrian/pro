@@ -1,7 +1,6 @@
 /* FOUNDATION */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;415;500;575;600;625;700&display=swap');
 
 b {
     font-weight: 550;
@@ -86,7 +85,7 @@ body {
 
 .story-title {
     font-size: 42px;
-    font-weight: 600;
+    font-weight: 625;
     width: fit-content;
 }
 
@@ -179,7 +178,7 @@ body {
 
 .header-title {
     font-size: 48px;
-    font-weight: 650;
+    font-weight: 625;
     align-self: center;
     margin-top: 48px;
     text-align: center;
@@ -195,16 +194,20 @@ body {
     margin-bottom:-16px;
 }
 
-.header-detail {
+.header-detail, .header-detail-2 {
     font-size: 17px;
     font-weight: 500;
     opacity: 0.5;
     z-index: 2;
 }
 
-.story-text {
+.header-detail-2 {
+    opacity: 0.75;
+}
+
+.story-text, .story-text-2 {
     font-size: 21px;
-    font-weight: 400;
+    font-weight: 415;
     opacity: 0.75;
     margin-top: 16px;
     align-self: center;
@@ -212,7 +215,11 @@ body {
     flex-wrap: wrap;
 }
 
-.story-text p {
+.story-text-2 {
+    opacity: 1;
+}
+
+.story-text p, .story-text-2 p {
     flex: 1;
     margin-right: 16px;
     max-width: calc(50% - 8px);
@@ -225,11 +232,15 @@ body {
     margin-bottom: 8px;
 }
 
-.story-link {
+.story-link, .story-link-2 {
     margin-top: 16px;
     font-size: 24px;
     font-weight: 550;
     opacity: 0.75;
+}
+
+.story-link-2 {
+    opacity: 1;
 }
 
 /* WORK */
@@ -441,14 +452,13 @@ transform: scale(1.15);
     }
     
     .text-column {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 18px;
+        padding-right: 18px;
         margin-top: 8px;
     }
     
     .header-title {
         font-size: 32px;
-        font-weight: 600;
         margin-top: 32px;
         width:92%; 
     }
@@ -460,16 +470,16 @@ transform: scale(1.15);
         margin-bottom:8px;
     }
     
-    .header-detail {
+    .header-detail, .header-detail-2 {
         font-size: 14px;
     }
 
-    .story-text {
+    .story-text, .story-text-2 {
         font-size: 17px;
         margin-top: 16px;
     }
     
-    .story-text p {
+    .story-text p, .story-text-2 p {
         min-width: 100%;
         margin-bottom: 8px;
     }
