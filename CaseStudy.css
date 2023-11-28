@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+
 body {
     font-family: 'Inter', Helvetica Neue,sans-serif;
     letter-spacing: -0.022em;
@@ -109,7 +110,7 @@ footer-ghost {
 }
 
 .box, .box-text, .box-full {
-    border-radius: 50px;
+    border-radius: 40px;
     background-color: white;
     display: flex;
     position: relative;

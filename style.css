@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
+b {
+    font-weight: 550;
+}
+
 body {
     font-family: 'Inter', Helvetica Neue, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -24,6 +28,7 @@ body {
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
+    flex-direction: column;
 }
 
 .read {
@@ -54,6 +59,7 @@ body {
     flex-direction: row;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .row-work {
@@ -169,19 +175,19 @@ body {
     padding-right: 116px;
     flex-direction: flex-start;
     margin-top: -36px;
+    margin-bottom: 15vh;
 }
 
 .header-title {
     font-size: 48px;
     font-weight: 650;
-    z-index: 2;
     align-self: center;
-    margin-top: 64px;
+    margin-top: 48px;
     text-align: center;
 }
 
 .header-caption {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 500;
     opacity: 0.5;
     z-index: 2;
@@ -196,10 +202,11 @@ body {
     opacity: 0.5;
     z-index: 2;
 }
+
 .story-text {
     font-size: 21px;
     font-weight: 400;
-    opacity: 0.65;
+    opacity: 0.75;
     margin-top: 16px;
     align-self: center;
     display: flex;
@@ -208,8 +215,22 @@ body {
 
 .story-text p {
     flex: 1;
-    margin-right: 16px; /* Adjust as needed for the desired spacing between columns */
-    max-width: calc(50% - 8px); /* Adjust as needed for the desired width of each column */
+    margin-right: 16px;
+    max-width: calc(50% - 8px);
+}
+
+.story-subheader {
+    margin-top: 32px;
+    font-size: 32px;
+    font-weight: 550;
+    margin-bottom: 8px;
+}
+
+.story-link {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 550;
+    opacity: 0.75;
 }
 
 /* WORK */
@@ -221,12 +242,11 @@ body {
     box-sizing: border-box;
     align-items: center;
     padding: 32px;
-    transition: border-radius 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 
 .app {
-    height: 60px;
-    width: 60px;
+    height: 65px;
+    width: 65px;
     object-fit: cover;
     border-radius: 13px;
     margin-bottom: 8px;
@@ -268,82 +288,6 @@ body {
     right: 28px;
 }
 
-/* ABOUT */
-
-.about-column, .about-column-2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-.about, .about-2 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 7%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-}
-
-.about-main-title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #405E51;
-    text-align: flex-start;
-    margin-bottom: 16px;
-}
-
-.about-title {
-    font-size: 36px;
-    font-weight: 400;
-    color: #405E51;
-    text-align: flex-start;
-    margin-bottom: 16px;
-}
-
-.about-text {
-    font-size: 22px;
-    color: #405E51;
-    font-weight: 400;
-    margin-bottom: 32px;
-    text-align: center;
-}
-
-.i-about {
-    width: 64px; 
-    height: 64px;
-    margin-bottom: 8px;
-}
-
-.about-detail-L,
-.about-detail-R {
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    position: absolute;
-    bottom: 28px;
-}
-
-.about-detail-L {
-    color: white;
-    opacity: 0.85;
-    left: 28px;
-}
-
-.about-detail-R {
-    opacity: 0.5;
-    right: 28px;
-}
-
 /* AUDIO */
 
 .background {
@@ -367,6 +311,16 @@ body {
     }
 }
 
+.audio-detail {
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0.5;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
 .au-disc-container {
     display: flex;
     flex-direction: row;
@@ -375,6 +329,7 @@ body {
     justify-content: center;
     animation: discAnimation 1s ease-in-out none;
     margin-top: 64px;
+    margin-bottom: 10vh;
 }
 
 .au-disc {
@@ -561,56 +516,6 @@ transform: scale(1.15);
         width: 200%;
         margin-top: 32px;
         margin-bottom: 8px;
-    }
-    
-    /* ABOUT */
-    
-    .about-column {
-        height: 50vh;
-    }
-
-    .about-column-2 {
-        width: 100%;
-        height: auto;
-    }
-    
-    .about-2 {
-        height: fit-content;
-        padding: 16px;
-    }
-
-    .about-main-title {
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 8px;
-    }
-    
-    .about-title {
-        font-size: 21px;
-        margin-bottom: 8px;
-    }
-    
-    .about-text {
-        font-size: 17px;
-        margin-bottom: 32px;
-    }
-    
-    .i-about {
-        width: 44px; 
-        height: 44px;
-    }
-    
-    .about-detail-L,
-    .about-detail-R {
-        bottom: 16px;
-    }
-    
-    .about-detail-L {
-        left: 16px;
-    }
-    
-    .about-detail-R {
-        right: 16px;
     }
     
     /* AUDIO */
