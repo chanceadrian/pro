@@ -206,24 +206,25 @@ body {
     font-weight: 435;
 }
 
-.story-text, .story-text-2 {
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.story-section {
+    font-size: 23px;
+    font-weight:625;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.story-text {
     font-size: 21px;
     font-weight: 415;
     opacity: 1;
     margin-top: 16px;
-    align-self: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.story-text-2 {
-    opacity: 1;
-}
-
-.story-text p, .story-text-2 p {
-    flex: 1;
-    margin-right: 16px;
-    max-width: calc(50% - 8px);
+    columns: 250px 4;
+    column-gap: 16px; 
 }
 
 .story-subheader {
@@ -478,6 +479,10 @@ transform: scale(1.15);
     .story-text, .story-text-2 {
         font-size: 17px;
         margin-top: 16px;
+    }
+
+    .story-section {
+        font-size: 19px;
     }
     
     .story-text p, .story-text-2 p {
