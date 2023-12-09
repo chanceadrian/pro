@@ -21,7 +21,7 @@ body {
     position: relative;
 }
 
-.link {
+.link, .link-story {
     display: flex;
     color: inherit;
     text-decoration: none;
@@ -30,30 +30,11 @@ body {
     flex-direction: column;
 }
 
-.read {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    margin-top: 16px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    font-size: 17px;
-    font-weight: 450;
-    color: rgba(0, 0, 0, 0.65)
+.link-story {
+    width: 32%;
 }
 
-.i-read {
-    width: 32px; 
-    height: 16px;
-    margin-right: 5px; 
-    opacity: 0.65;
-}
-
-.row-story {
+.row-story, .row-story-2 {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -84,9 +65,32 @@ body {
 }
 
 .story-title {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 600;
     width: fit-content;
+}
+
+.read {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-top: 16px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-size: 17px;
+    font-weight: 450;
+    color: rgba(0, 0, 0, 0.65)
+}
+
+.i-read {
+    width: 32px; 
+    height: 16px;
+    margin-right: 5px; 
+    opacity: 0.65;
 }
 
 .story-detail {
@@ -173,7 +177,6 @@ body {
     padding-right: 116px;
     flex-direction: flex-start;
     margin-top: -36px;
-    margin-bottom: 15vh;
 }
 
 .header-title {
@@ -214,8 +217,8 @@ p {
 .story-section {
     font-size: 23px;
     font-weight:625;
-    margin-top: 16px;
-    margin-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 0px;
 }
 
 .story-text {
@@ -228,21 +231,43 @@ p {
 }
 
 .story-subheader {
-    margin-top: 32px;
+    margin-top: 16px;
     font-size: 32px;
     font-weight: 550;
+    margin-bottom: 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 32px;
+    margin-bottom: 107px;
+    box-sizing: border-box;
+}
+
+.foot-header {
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.53;
     margin-bottom: 8px;
 }
 
-.story-link, .story-link-2 {
-    margin-top: 16px;
+.foot-title {
     font-size: 24px;
-    font-weight: 550;
-    opacity: 1;
+    font-weight: 600;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.story-link-2 {
-    opacity: 1;
+.foot-body {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    opacity: 0.56;
 }
 
 /* WORK */
@@ -363,18 +388,9 @@ p {
 
 /* SIDEBAR */
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    bottom: 16px;
-    z-index: 2;
-}
-
 .sidebar {
+    position: fixed;
+    bottom: 16px;
     width: 300px;
     height: 75px;
     border-radius: 45px;
@@ -387,7 +403,6 @@ p {
     -webkit-backdrop-filter: blur(12px);
     box-shadow: inset 0px 1px 1.4px rgba(255, 255, 255, 0.4), inset 0px -1px 1.4px rgba(255, 255, 255, 0.1);
     animation: frontAnimation 0.75s ease-in-out none;
-    justify-content:center;
 }
 
 .button {
@@ -421,21 +436,25 @@ transform: scale(1.15);
         flex-direction: row;
     }
     
+    .link-story {
+        width: 100%;
+    }
+
     /* HOME */
     
     .story {
-        height: 60vh;
-        margin: 8px;
-        margin-bottom: 0px;
-        border-radius: 16px;
+        height: 65vh;
+        margin: 16px;
+        margin-bottom: 0;
+        border-radius: 32px;
+    }
+
+    .read {
+        display: none;
     }
     
     .story-title {
         font-size: 32px;
-    }
-    
-    .story-detail {
-        opacity: 0;
     }
     
     /* STORY */
@@ -473,7 +492,7 @@ transform: scale(1.15);
     }
     
     .header-detail, .header-detail-2 {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .story-text, .story-text-2 {
@@ -490,10 +509,27 @@ transform: scale(1.15);
         margin-bottom: 8px;
     }
     
+    .row-story-2 {
+        flex-direction: column;
+    }
+
+    .foot-header {
+        font-size: 15px;
+    }
+    
+    .foot-title {
+        font-size: 24px;
+    }
+    
+    .foot-body {
+        font-size: 15px;
+    }
+
     /* WORK */
     .work {
-        margin: 8px;
-        border-radius: 16px;
+        margin: 16px;
+        margin-bottom: 0;
+        border-radius: 32px;
         overflow: hidden;
     }
     
@@ -539,13 +575,10 @@ transform: scale(1.15);
     
     /* SIDEBAR */
     
-    .footer {
-        bottom: 0px;
-    }
-    
     .sidebar {
         width: 100%;
         border-radius: 0px;
+        bottom: 0px;
     }
 
     .button {
