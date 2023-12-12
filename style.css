@@ -444,9 +444,6 @@ transform: scale(1.15);
     
     .story {
         height: 65vh;
-        margin: 16px;
-        margin-bottom: 0;
-        border-radius: 32px;
     }
 
     .read {
@@ -527,9 +524,6 @@ transform: scale(1.15);
 
     /* WORK */
     .work {
-        margin: 16px;
-        margin-bottom: 0;
-        border-radius: 32px;
         overflow: hidden;
     }
     
@@ -579,11 +573,16 @@ transform: scale(1.15);
         width: 100%;
         border-radius: 0px;
         bottom: 0px;
+        justify-content: space-evenly;
+        box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0), inset 0px 0px 0px rgba(255, 255, 255, 0);
     }
 
     .button {
         margin: 5px;
-        margin-bottom:16px;
+    }
+
+    .button img {
+        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
     }
 
     @keyframes frontAnimation {
