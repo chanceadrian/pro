@@ -302,7 +302,7 @@ footer-ghost {
     display: flex;
     flex-direction: column;
     color: white;
-    opacity: 0.6;    
+    opacity: 0.75;      
     font-weight: 400;
     width: 65px;
     border: none;
@@ -362,6 +362,7 @@ transform: scale(1.15);
         border-radius: 0px;
         bottom: 0px;
         justify-content: space-evenly;
+        height: 44px;
         box-shadow: inset 0px 0px 0px rgba(255, 255, 255, 0), inset 0px 0px 0px rgba(255, 255, 255, 0);
     }
 
@@ -370,7 +371,7 @@ transform: scale(1.15);
     }
 
     .button img {
-        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+        display: none;
     }
 
     body {
