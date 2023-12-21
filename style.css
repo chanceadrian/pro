@@ -198,7 +198,8 @@ small {
     -webkit-backdrop-filter: blur(25px);
     position: fixed;
     bottom: 0px;
-    padding: 16px;
+    padding-inline: 16px;
+    padding-block: 12px;
     align-self: center;
     animation:none;
 }
