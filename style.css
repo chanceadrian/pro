@@ -1,6 +1,6 @@
 /* FOUNDATION */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;650;&display=swap');
 
 body {
     font-family: 'Inter', Helvetica Neue, sans-serif;
@@ -11,10 +11,12 @@ body {
     margin: 0px;
     box-sizing: border-box;
     background-color: rgb(245, 245, 247);
-    gap: 8px;
+    gap: 15px;
+    padding: 15px;
     margin-bottom: 49px;
-    background-color: white;
+    background-color: #F5F5F7;
 }
+
 h1 {
     font-weight: 600;
 }
@@ -64,14 +66,15 @@ span {
 .card-b, .card-w, .card-w-b, .card-b-b, .s-card-b, .s-card-w, .s-card-w-b, .s-card-b-b, .w-card {
     display: flex;
     flex-direction: column;
-    height: 31vh;
+    height: 50vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 16px;
+    padding: 30px;
     color: black;
     position: relative;
     text-decoration: none;
+    border-radius: 30px;
 }
 
 @keyframes fly-in {
@@ -94,13 +97,14 @@ span {
     width: 100%;
     align-items: center;
     text-align: center;
-    padding-block: 32px;
+    padding-block: 30px;
     box-sizing: border-box;
 }
 
 .row {
+    display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 15px;
 }
 
 .w-card img, .w-card .wood, .w-card .wood-v {
@@ -147,8 +151,8 @@ span {
     width: 34px;
     opacity: 60%;
     position: absolute;
-    bottom: 16px;
-    right: 16px;
+    bottom: 30px;
+    right: 30px;
     font-size: 17px;
     font-weight: 400;
     color: #EBEBF5;
@@ -162,8 +166,8 @@ span {
 .card-w-b img, .card-b-b img, .s-card-w-b small, .s-card-b-b small {
     bottom: auto;
     right: auto;
-    top: 16px;
-    left: 16px;
+    top: 30px;
+    left: 30px;
 }
 
 small {
@@ -206,7 +210,7 @@ small {
 .nav-link {
     opacity: 0.75;  
     font-size: 17px;  
-    font-weight: 500;
+    font-weight: 400;
     width: 64px;
     color: white;
     opacity: 0.7;
@@ -228,11 +232,19 @@ small {
 @media screen and (min-width: 800px) {
     body {
         margin-bottom: 0px;
+        padding: 25px;
+        gap: 25px;
     }
     
+    .header, .au-disc-text {
+        padding-top: 32px;
+        padding-bottom: 8px;
+        padding-inline: 12px;
+    }
+
     h1 {
-        font-size: clamp(48px, 3.5vw, 64px);
-        line-height: clamp(48px, 3.5vw, 64px);
+        font-size: 3.3vw;
+        line-height: 3.6vw;
         letter-spacing: -1.5px;
     }
 
@@ -249,23 +261,25 @@ small {
     }
 
     .card-b, .card-w, .card-w-b, .card-b-b {
-        padding: 32px;
-        height: 87vh;
+        padding-inline: 36px;
+        padding-block: 40px;
+        height: 80vh;
+        border-radius: 30px;
     }
 
     .card-b img, .card-w img, .card-w-b img, .card-b-b img{
         height: 21px;
         width: 42px;
         opacity: 60%;
-        bottom: 32px;
-        right: 32px;
+        bottom: 40px;
+        right: 40px;
     }
     
     .card-w-b img, .card-b-b img, .s-card-w-b small, .s-card-b-b small {
         bottom: auto;
         right: auto;
-        top: 32px;
-        left: 32px;
+        top: 40px;
+        left: 40px;
     }
 
     .sidebar {
@@ -299,6 +313,9 @@ small {
 
     .w-card {
         width: 100%;
+        border-radius: 30;
+        padding-inline: 36px;
+        padding-block: 40px;
     }
 
     .w-card .wood {
@@ -314,21 +331,21 @@ small {
 
     .w-card small, .s-card-b small, .s-card-w small {
         position: absolute;
-        bottom: 32px;
-        right: 32px;
+        bottom: 40px;
+        right: 40px;
     }
 
     .row {
         display: flex;
         flex-direction: row;
-        gap: 8px;
+        gap: 25px;
     }
 
     .audio-row {
         display: flex;
         flex-direction: row;
-        gap: 32px;
-        padding: 32px;
+        gap: 25px;
+        padding: 25px;
         justify-content: center;
         animation: discAnimation 1s ease-in-out none;
     }
@@ -336,7 +353,7 @@ small {
     .audio-column, .audio-column-off {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 50px;
     }
 
     .audio-column-off {
@@ -344,9 +361,9 @@ small {
     }
 
     .au-disc, .au-disc-text {
-        height: 26vw;
+        height: 27vw;
         min-height: 300px;
-        width: 26vw;
+        width: 27vw;
         min-width: 300px;
         background-size: cover;
         background-position: center;
@@ -427,7 +444,6 @@ small {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     animation: frontAnimation 1.5s ease-in-out none;
-    border-radius: 8px;
 }
 
 @keyframes frontAnimation {
@@ -492,7 +508,7 @@ small {
 
 .header-caption {
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 400;
     opacity: 0.53;
     z-index: 2;
     width:50%; 
@@ -572,7 +588,7 @@ p {
 
 .foot-body {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 12px;
     opacity: 0.56;
 }
