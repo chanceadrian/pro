@@ -109,6 +109,7 @@ span {
     text-align: center;
     padding-block: 30px;
     box-sizing: border-box;
+    min-height: 300px;
 }
 
 .row {
@@ -500,6 +501,7 @@ small {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     animation: frontAnimation 1.5s ease-in-out none;
+    border-radius: 30px;
 }
 
 @keyframes frontAnimation {
