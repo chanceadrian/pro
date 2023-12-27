@@ -862,7 +862,7 @@ small {
     flex-direction: column;
     padding-block: 3em;
     padding-bottom: 8em;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 .foot-header {
