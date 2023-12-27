@@ -831,7 +831,7 @@ small {
 
 .story-text {
     columns: 250px 4;
-    column-gap: 16px;
+    column-gap: 21px;
     width: 87.5%;
     margin-bottom: 3em;
     align-self: center;
