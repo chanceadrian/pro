@@ -1,6 +1,6 @@
 /* FOUNDATION */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;575;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;575;600;650;700&display=swap');
 
 body {
     font-family: 'Inter', sans-serif;
@@ -10,11 +10,10 @@ body {
     width: 100%;
     margin: 0px;
     box-sizing: border-box;
-    background-color: rgb(245, 245, 247);
-    gap: 15px;
-    padding: 15px;
+    gap: clamp(13px, 3.82vw, 17px);
+    padding: clamp(13px, 3.82vw, 17px);
     margin-bottom: 49px;
-    background-color: #F5F5F7;
+    background: #ffffff;
     letter-spacing: normal;
 }
 
@@ -30,6 +29,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
+}
+
+h1, h2, h4, h5 {
     animation: fly-in linear both;
     animation-timeline: view(block);
     animation-range: cover 0% contain 25%;
@@ -63,6 +65,7 @@ h4 {
     letter-spacing: 0em;
     margin-bottom: clamp(24px, 7.12vw, 32px);
     font-weight: 700;
+    margin-inline: 0.5em;
 }
 
 h5 {
@@ -72,14 +75,46 @@ h5 {
     font-weight: 600;
 }
 
-.center-text {
+h6 {
+    font-size: clamp(24px, 2.144vw, 40px);
+    line-height: 1.125;
+    letter-spacing: .004em;
+    font-weight: 700;
+}
+
+h7 {
+    font-size: clamp(13px, 4.33vw, 21px);
+    line-height: 1.2353641176;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    color:#86868b;
+}
+
+.center-text, .left-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-inline: 0;
-    padding-block: clamp(102px, 27.98vh, 118px);
+    padding-inline: clamp(13px, 3.82vw, 17px);
+    padding-block: clamp(85px, 24.17vw, 105px);
+    padding-bottom: clamp(50px, 15.26vw, 70px);
     text-align: center;
+    align-items: center;
     box-sizing: border-box;
+    width: 100vw;
+    align-self: center;
+}
+
+.left-text {
+    justify-content: flex-start;
+    justify-items: flex-start;
+    text-align: left;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.less-margin {
+    margin-inline: 0px;
+    margin-bottom: 16px;
 }
 
 @keyframes appear {
@@ -98,7 +133,8 @@ h5 {
 }
 
 span {
-    color: #86868B;
+    opacity: 0.53;
+    
 }
 
 .card-b, .card-w, .card-w-b, .card-b-b, .s-card-b, .s-card-w, .s-card-w-b, .s-card-b-b, .w-card {
@@ -109,10 +145,10 @@ span {
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
-    color: black;
+    color: #1d1d1f;
     position: relative;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 0px;
 }
 
 @keyframes fly-in {
@@ -226,7 +262,7 @@ small {
     -webkit-backdrop-filter: blur(25px);
     position: fixed;
     bottom: 0px;
-    padding-inline: 16px;
+    padding-inline: 17px;
     padding-block: 12px;
     align-self: center;
     animation:none;
@@ -253,7 +289,7 @@ small {
 .nav-link {
     opacity: 0.75;  
     font-size: 17px;  
-    font-weight: 400;
+    font-weight: 500;
     width: 64px;
     color: white;
     opacity: 0.7;
@@ -263,6 +299,7 @@ small {
     align-items: center;
     animation:none;
     letter-spacing: 0px;
+    margin-bottom: 1px;
 }
 
 .nav-link img {
@@ -303,6 +340,10 @@ small {
     animation: spin 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
 }
 
+.au-disc {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
 .au-disc-text {
     animation: appear 1s ease-in-out none;
     height: fit-content;
@@ -311,17 +352,42 @@ small {
     min-width: 0;
 }
 
+.button {
+    font-size: clamp(12px, 3.6vw, 16px);
+    line-height: 1.4285914286;
+    letter-spacing: -0.016em;
+    font-weight: 600;
+    padding: 11px 18px 11px 15px;
+    background-color: #4A705E;
+    color: white;
+    text-decoration: none;
+    margin-top: clamp(45px, 13.99vw, 65px);
+    border-radius: 100px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(6px, 1.78vw, 8px);
+}
+
+.button img {
+    height: clamp(12px, 3.6vw, 16px);
+    min-width: clamp(12px, 7.2vw, 16px);
+}
+
 @media screen and (min-width: 800px) {
     body {
         margin-bottom: 0px;
-        padding: clamp(20px, 1.7vw, 30px);
-        gap: clamp(20px, 1.7vw, 30px);
+        padding: 0;
+        gap: 10px;
+        background: #F5F5F7;
     }
     
     .header, .au-disc-text {
         padding-top: 32px;
         padding-bottom: 8px;
         padding-inline: 12px;
+        display: none;
     }
 
     h1 {
@@ -334,8 +400,8 @@ small {
     h2 {
         font-size: clamp(40px, 3.22vw, 56px);
         line-height: 1.083;
-        letter-spacing: -0.003em;
-        font-weight: 700;
+        letter-spacing: -0.01em;
+        font-weight: 650;
     }
 
     h3 {
@@ -361,16 +427,33 @@ small {
         font-weight: 600;
     }
 
-    .center-text {
+    h6 {
+        font-size: clamp(28px, 2.144vw, 36px);
+        line-height: 1.125;
+        font-weight: 700;
+        letter-spacing: .004em;
+        width: 32em;
+    }
+
+    h7 {
+        font-size: clamp(17px, 1.41vw, 25px);
+        line-height: 1.381;
+        font-weight: 600;
+        letter-spacing: 0.011em;
+        color:#86868b;
+    }
+
+    .center-text, .left-text {
         padding-inline: clamp(215px, 15.5vw, 247px);
         padding-block: clamp(91px, 11.5vh, 123px);
+        padding-bottom: clamp(136px, 9.38vw, 146px);
     }
 
     .card-b, .card-w, .card-w-b, .card-b-b {
         padding-inline: 36px;
         padding-block: 40px;
-        height: 80vh;
-        border-radius: 30px;
+        height: 78vh;
+        border-radius: 0px;
     }
 
     .card-b img, .card-w img, .card-w-b img, .card-b-b img{
@@ -390,11 +473,14 @@ small {
 
     .sidebar {
         bottom: 16px;
-        width: fit-content;
-        border-radius: 50px;
-        padding-block: 14px;
+        width: 300px;
+        height:75px;
+        border-radius: 100px;
         box-shadow: inset 0px 1px 1.4px rgba(255, 255, 255, 0.4), inset 0px -1px 1.4px rgba(255, 255, 255, 0.1);
         animation: frontAnimation 0.75s ease-in-out none; 
+        padding: 0;
+        align-items: center;
+        justify-content: center;
     }
     .nav-link:hover {
         transform: scale(1.15);
@@ -408,6 +494,7 @@ small {
         display:block;
         width: 26px; 
         height: 26px;
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
     }
 
     small {
@@ -426,7 +513,7 @@ small {
 
     .w-card {
         width: 100%;
-        border-radius: 30;
+        border-radius: 0;
         padding-inline: 36px;
         padding-block: 40px;
     }
@@ -451,7 +538,7 @@ small {
     .row {
         display: flex;
         flex-direction: row;
-        gap: clamp(20px, 1.7vw, 30px);
+        gap: 10px;
     }
 
     .audio-row {
@@ -490,6 +577,21 @@ small {
 
     .au-disc-text {
         animation: appear 1s ease-in-out none;
+    }
+
+    .button {
+        font-size: clamp(17px, 1.27vw, 21px);
+        line-height: 1.2105263158;
+        letter-spacing: .012em;
+        font-weight: 600;
+        padding: 16px 37px 17px 27px;
+        margin-top: clamp(60px, 4.36vw, 70px);
+        gap: clamp(14px, 1.07vw, 18px);
+    }
+    
+    .button img {
+        height: clamp(12px, 3.6vw, 16px);
+        min-width: clamp(12px, 7.2vw, 16px);
     }
 }
 
@@ -533,6 +635,7 @@ small {
     justify-content: center;
     position: relative;
     box-sizing: border-box;
+    align-self: center;
 }
 
 .overlay {
@@ -548,14 +651,26 @@ small {
     display: flex;
     position: absolute;
     inset: 100px;
-    top: 50px;
-    bottom:50px;
+    top: 24px;
+    bottom:24px;
     align-content: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     overflow: hidden;
     animation: frontAnimation 1.5s ease-in-out none;
-    border-radius: 30px;
+    border-radius: 16px;
+}
+
+.row-about {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    padding-inline: 150px;
+    padding-top: 80px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+    text-align: left;
+    gap: 82px;
 }
 
 @keyframes frontAnimation {
@@ -588,7 +703,7 @@ small {
 .photo-focus {
     display: flex;
     width: 100vw;
-    height: 94.5vh;
+    height: 95vh;
     object-fit: cover;
     align-self: center;
     justify-self: center;
@@ -596,7 +711,7 @@ small {
 
 .photo-focus {
     position: absolute;
-    inset: -50px -100px -50px -100px;
+    inset: -24px -100px -24px -100px;
 }
 
 .text-column {
@@ -607,7 +722,6 @@ small {
     padding-left: 116px;
     padding-right: 116px;
     flex-direction: flex-start;
-    margin-top: -36px;
 }
 
 .header-title {
@@ -625,7 +739,6 @@ small {
     z-index: 2;
     width:50%; 
     text-align: center;
-    margin-bottom:-16px;
     align-self: center;
 }
 
@@ -655,7 +768,7 @@ p {
 
 .story-text {
     font-size: 21px;
-    font-weight: 415;
+    font-weight: 400;
     opacity: 1;
     margin-top: 16px;
     columns: 250px 4;
@@ -706,6 +819,23 @@ p {
 }
 
 @media screen and (max-width: 800px) {
+    .link-story {
+        width: 100%;
+    }
+    
+    .footer {
+        padding-inline: clamp(25px, 5%, 80px);
+    }
+
+    .row-about {
+        flex-direction: column;
+        width: 100%;
+        gap: 22px;
+        padding: 0;
+        padding-top: 11px;
+        padding-bottom: 44px;
+    }
+
     .row-story-2 {
         flex-direction: column;
     }
