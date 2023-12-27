@@ -10,11 +10,12 @@ body {
     width: 100%;
     margin: 0px;
     box-sizing: border-box;
-    gap: clamp(13px, 3.82vw, 17px);
-    padding: clamp(13px, 3.82vw, 17px);
+    gap: 10px;
+    padding: 0px;
     margin-bottom: 49px;
     background: #ffffff;
     letter-spacing: normal;
+    position: relative;
 }
 
 .story-body {
@@ -178,7 +179,7 @@ span {
 .row {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .w-card img, .w-card .wood, .w-card .wood-v {
@@ -292,7 +293,7 @@ small {
 .nav-link {
     opacity: 0.75;  
     font-size: 17px;  
-    font-weight: 500;
+    font-weight: 400;
     width: 64px;
     color: white;
     opacity: 0.7;
@@ -321,7 +322,10 @@ small {
 .audio-column, .audio-column-off {
     display: flex;
     flex-direction: column;
+    justify-self: center;
     gap: 15px;
+    align-items: center;
+    text-align: center;
 }
 
 .audio-column-off {
@@ -558,6 +562,7 @@ small {
         display: flex;
         flex-direction: column;
         gap: 50px;
+        text-align: left;
     }
 
     .audio-column-off {

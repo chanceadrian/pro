@@ -380,7 +380,7 @@ transform: scale(1.15);
     .button {
         opacity: 0.75;  
         font-size: 17px;  
-        font-weight: 500;
+        font-weight: 400;
         width: 64px;
         color: white;
         opacity: 0.7;
