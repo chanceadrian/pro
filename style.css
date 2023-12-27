@@ -5,6 +5,7 @@
 body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-h1, h2, h4, h5 {
+h1, h2, h4 {
     animation: fly-in linear both;
     animation-timeline: view(block);
     animation-range: cover 0% contain 25%;
@@ -256,11 +257,12 @@ small {
 .sidebar {
     display: flex;
     flex-direction: row;
-    width: 85%;
+    width: 86%;
     margin: clamp(13px, 3.82vw, 17px);
     box-sizing: border-box;
     border-radius: 16px;
     background-color: rgb(186, 115, 130, 0.75);
+    box-shadow: inset 0px 1px 1.4px rgba(255, 255, 255, 0.4), inset 0px -1px 1.4px rgba(255, 255, 255, 0.1);
     justify-content: space-evenly;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -345,10 +347,6 @@ small {
     flex-direction: column;
     justify-content: center;
     animation: spin 1.3s cubic-bezier(0.39, 0.575, 0.565, 1) 1;
-}
-
-.au-disc {
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
 }
 
 .au-disc-text {
@@ -484,7 +482,6 @@ small {
         height:75px;
         border-radius: 100px;
         margin: 0;
-        box-shadow: inset 0px 1px 1.4px rgba(255, 255, 255, 0.4), inset 0px -1px 1.4px rgba(255, 255, 255, 0.1);
         animation: frontAnimation 0.75s ease-in-out none; 
         padding: 0;
         align-items: center;
